@@ -1,0 +1,380 @@
+/* Pink Theme - SL Fashion Blog */
+:root {
+    --pink-dark: #d63384;
+    --pink-main: #ff69b4;
+    --pink-light: #ffb6c1;
+    --pink-pale: #fff0f5;
+    --pink-accent: #ff1493;
+    --text-dark: #2d2d2d;
+    --text-light: #666;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: var(--pink-pale);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(214, 51, 132, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--pink-dark);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink-main);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--pink-main) 0%, var(--pink-accent) 50%, var(--pink-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 2rem;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 5%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--pink-dark);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--pink-main);
+    margin: 1rem auto 0;
+}
+
+/* About Section */
+.about {
+    background: var(--white);
+}
+
+.about-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.3);
+    border: 5px solid var(--pink-light);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--pink-main);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+}
+
+
+/* Blog Section */
+.blog {
+    background: var(--pink-pale);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(214, 51, 132, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.25);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content .date {
+    color: var(--pink-main);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.card-content h3 {
+    margin: 0.5rem 0;
+    color: var(--text-dark);
+}
+
+.card-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: var(--pink-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: var(--pink-accent);
+}
+
+/* Credits Section */
+.credits {
+    background: var(--white);
+}
+
+.credits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.credit-card {
+    background: var(--pink-pale);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.credit-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.credit-info {
+    padding: 1.5rem;
+}
+
+.credit-info h3 {
+    color: var(--pink-dark);
+    margin-bottom: 1rem;
+}
+
+.credit-info ul {
+    list-style: none;
+}
+
+.credit-info li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--pink-light);
+    color: var(--text-light);
+}
+
+.credit-info li:last-child {
+    border-bottom: none;
+}
+
+.credit-info strong {
+    color: var(--pink-dark);
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink-pale) 100%);
+    text-align: center;
+}
+
+.contact-content p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-btn.flickr {
+    background: #0063dc;
+}
+
+.contact-btn.facebook {
+    background: #1877f2;
+}
+
+.contact-btn.linktree {
+    background: var(--pink-accent);
+}
+
+.inworld {
+    font-size: 1.2rem;
+    color: var(--pink-dark);
+}
+
+/* Footer */
+footer {
+    background: var(--pink-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .section {
+        padding: 3rem 5%;
+    }
+}
